@@ -3,16 +3,16 @@ sumOfEvenFibonacciNumbers = function(n){
   var sum = 0;
 var prev=0;
 var curr=1;
-var add=0;
+//var add=0;
 var array=[];
   var result=0;
-     for(;add<n;){
+     while(sum<n){
          
-         add= prev+curr;
-         array.push(add);
+         sum= prev+curr;
+         array.push(sum);
          prev=curr;
 
-        curr=add;
+         curr=sum;
        
 
      }
