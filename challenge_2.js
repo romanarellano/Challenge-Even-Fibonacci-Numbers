@@ -5,9 +5,9 @@ var curr=1;
 var array=[];
   var result=0;
      while(sum<n){
-         
-         sum= prev+curr;
          array.push(sum);
+         sum= prev+curr;
+         
          prev=curr;
 
          curr=sum;
