@@ -7,40 +7,26 @@ var array=[];
      while(sum<n){
          
          sum= prev+curr;
-         array.push(sum);//array=[1,2,3,5,8]
-         prev=curr;//prev=3
+         array.push(sum);
+         prev=curr;
 
-         curr=sum;//curr=5
-       
-
+         curr=sum;
      }
 
-     var add= function(x,y){
+      var add= function(x,y){
         return x+y;
 
      };
-    var total= array.map(function(x){
+    
+      var total= array.filter(function(x){
   
-     if(x%2===0){
+      if(x%2===0){
         return x;
        
      }
 
-  }).filter(function(x){
-         return typeof(x) === "number";
-         
-       }).reduce(function(x,y){
-        return x+y;
+  }).reduce(add);
 
-     },0);
-// for(var j=0;j<array.length;j++){
-
-//    if( array[j]%2===0){
-        
-//         result+=array[j];
-
-//    }
-// }
   
-  return total;//result;
+     return total;//result;
 };
